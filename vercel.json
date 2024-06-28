@@ -1,0 +1,14 @@
+{
+    "builds":[{
+        "src": "health_umbrella_foundation_backend/wsgi.py",
+        "use":"@vercel/python",
+        "config":{"maxLambdaSize": "15mb", "runtime":"python3.10"}
+    }],
+    "routes": [
+        {
+            "src":"/(.*)",
+            "dest": "health_umbrella_foundation_backend/wsgi.py"
+        }
+    ]
+
+}
